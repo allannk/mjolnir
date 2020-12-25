@@ -2,7 +2,7 @@ project('blink', 'cpp', default_options: ['cpp_std=c++17', 'b_lto=false', 'b_asn
 
 # ────────────────
 # Set default args
-srcs      = ['main.cc']
+srcs      = [] #'examples/main.cc']
 incdirs   = []
 c_args    = []
 link_args = []
@@ -30,8 +30,8 @@ endforeach
 link_deps += meson.get_compiler('cpp').find_library('/usr/lib/gcc/arm-none-eabi/10.2.0/libgcc')
 
 main = executable(
-  'main',
-  [srcs, startfile],
+  'example',
+  ['examples/main.cc', startfile],
   name_suffix: 'elf',
   cpp_args: [c_args], 
   link_args: [link_args],
