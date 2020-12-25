@@ -1,0 +1,1 @@
+option('mcu', type : 'string', value : 'STM32F103C6', description : 'Specific MCU chip')
